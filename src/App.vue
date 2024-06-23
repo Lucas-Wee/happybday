@@ -239,13 +239,24 @@ body {
 
 .fancy-font {
     font-family: 'Roboto', sans-serif;
-    font-size: 4em;
+    font-size: 5vw; /* Font size is 2% of the viewport's width */
     color: black;
     margin: 0;
     text-align: center;
     cursor: pointer; /* Adds a pointer cursor on hover */
 }
 
+@media (max-width: 600px) {
+    .fancy-font {
+        font-size: 12px; /* Minimum font size */
+    }
+}
+
+@media (min-width: 1200px) {
+    .fancy-font {
+        font-size: 24px; /* Maximum font size */
+    }
+}
 
 .designed-by {
     position: absolute;
@@ -261,7 +272,7 @@ body {
 }
 
 .velas {
-  background: #ffffff;
+  background: #DE3163;
   border-radius: 10px;
   position: absolute;
   top: 228px;
@@ -341,8 +352,8 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #fff;
-  border: 2px solid #000;
+  background-color: #FFC0CB;
+  border: 5px solid #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -358,7 +369,8 @@ body {
 }
 
 .music-btn.paused::after {
-  content: '\f003';
+  content:
+ '\f003';
   font-family: 'Material Design Icons';
   font-size: 24px;
   color: #000;
